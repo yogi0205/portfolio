@@ -1,0 +1,225 @@
+<!doctype html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yogeshwari L — Visual Designer</title>
+  <meta name="description" content="Portfolio — Yogeshwari L. Visual Designer creating clean, minimal and functional interfaces." />
+  
+  <style>
+    :root{
+      --bg:#0b0f12; --card:#131a24; --muted:#9aa5af; --accent:#6294ff; --glass: rgba(255,255,255,0.07);
+      --maxw:1100px; --radius:14px; --mono: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:var(--mono);
+      background:linear-gradient(180deg,#0d0f25 0%, #101527 60%, #0c0f1c 100%);
+      color:#e6eef4; -webkit-font-smoothing:antialiased;
+    }
+    .wrap{max-width:var(--maxw);margin:48px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4bd3ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#081018}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:14px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:36px;align-items:start}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);padding:22px;
+      box-shadow:0 6px 30px rgba(2,6,10,0.6);position:relative;overflow:hidden;
+    }
+    .intro h2{margin:0;font-size:32px}
+    .intro p{color:var(--muted);line-height:1.5}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{background:var(--accent);color:#071028;border:none;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600}
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .projects{margin-top:28px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{
+      display:flex;flex-direction:column;
+      gap:12px;padding:18px;
+      background:var(--card);
+      border-radius:12px;
+      transition:transform .22s, box-shadow .22s;
+    }
+    .project:hover{
+      transform:translateY(-8px);
+      box-shadow:0 18px 40px rgba(2,6,10,0.7)
+    }
+    .project h3{margin:0;font-size:18px}
+    .project p{margin:0;color:var(--muted);font-size:13px}
+    footer{margin-top:48px;padding:24px;color:var(--muted);text-align:center}
+
+    /* ------- COMPACT PROTOTYPE BUTTON (BEST OPTION) ----- */
+    .btn-proto {
+      background: var(--accent);
+      color: #071028;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;       /* stays compact */
+      width: fit-content;        /* 🔥 prevents full width */
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn-proto:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(98,148,255,0.45);
+    }
+
+    .btn-proto svg {
+      width: 14px; height: 14px; stroke-width: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header>
+      <div class="brand">
+        <div class="logo">YL</div>
+        <div>
+          <h1>Yogeshwari L</h1>
+          <p class="lead">Visual Designer </p>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="UI resume only.pdf" download>Download CV</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card intro">
+        <h2>I see, I think, I design then I overthink.</h2>
+        <p>A visual designer focused on structure, clarity and modern UI that enhances usability across mobile and web.</p>
+
+        <div class="cta">
+          <button class="btn" onclick="location.href='#projects'">View Projects</button>
+          <button class="btn secondary" onclick="window.open('https://www.linkedin.com/in/yogeshwari-l/','_blank')">Connect on LinkedIn</button>
+        </div>
+      </div>
+
+      <aside class="card">
+  <div>
+    <strong>Location</strong>
+    <div style="color:var(--muted)">Salem, India</div>
+
+    <strong>Email</strong>
+    <div style="color:var(--muted)">yogeshwari1731@gmail.com</div>
+
+    <strong>Resume</strong>
+    <div>
+      <a href="/mnt/data/Yogeshwari _resume_visualdesigner .pdf" download style="color:var(--accent)">
+        Download PDF
+      </a>
+    </div>
+  </div>
+</aside>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" style="margin-top:28px">
+      <h2>Featured Projects</h2>
+
+      <!-- KABADDI APP -->
+      <article class="project card">
+        <h3>Kabaddi App — Full UI</h3>
+        <p>A clean sports interface designed to organize match data, player stats and team flows with clear hierarchy.</p>
+
+        <a href="https://www.figma.com/proto/Ul4JUutn2x7BdkGFLrxMUg/kabadi-App?node-id=163-1315"
+           target="_blank" class="btn-proto">
+          View Prototype
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </article>
+
+      <!-- HEALTHCARE -->
+      <article class="project card">
+        <h3>Healthcare Dashboard</h3>
+        <p>A minimal dashboard presenting vitals with strong readability and structure.</p>
+
+        <a href="https://www.figma.com/proto/vMiIFa1VuuskQGVntYyRPM/Health-care-(Community)"
+           target="_blank" class="btn-proto">
+          View Prototype
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </article>
+
+      <!-- SMOOTHIE -->
+      <article class="project card">
+        <h3>Smoothie Bowl Carousel</h3>
+        <p>A swipe-friendly product UI with clean layout and visual focus.</p>
+
+        <a href="https://www.figma.com/proto/BrBheTDCjhar5Bo4sYcgQW/Day-03"
+           target="_blank" class="btn-proto">
+          View Prototype
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </article>
+
+      <!-- GYM SIGNUP -->
+      <article class="project card">
+        <h3>Gym Signup Flow</h3>
+        <p>A functional onboarding flow designed for quick and easy registration.</p>
+
+        <a href="https://www.figma.com/proto/vwdhjHALqSHvwvlcDIouJ4/UI_Challenge"
+           target="_blank" class="btn-proto">
+          View Prototype
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </article>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" style="margin-top:36px">
+      <h2>About</h2>
+      <div class="card">
+        <p>I’m Yogeshwari, a visual designer who believes that great design feels simple, intentional and human. I love crafting clean interfaces with balanced spacing, refined typography and purposeful visual hierarchy. My work blends clarity with minimalism to create experiences that are not just beautiful, but genuinely easy to use.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" style="margin-top:36px">
+      <h2>Contact</h2>
+      <div class="card">
+        <div>Email: <a href="mailto:yogeshwari1731@gmail.com" style="color:var(--accent)">yogeshwari1731@gmail.com</a></div>
+        <div>LinkedIn: <a href="https://www.linkedin.com/in/yogeshwari-l/" target="_blank" style="color:var(--accent)">linkedin.com/in/yogeshwari-l</a></div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Yogeshwari L — Designed with passion and precision
+    </footer>
+
+  </div>
+</body>
+</html>
